@@ -328,5 +328,26 @@ Connect the GitHub repository (`bcabnc/DrRajeevKumar`) to Vercel, Netlify, or yo
 - `git status` clean and in sync with `origin/main`.
 - Remote verified at `https://github.com/bcabnc/DrRajeevKumar.git`.
 
+---
+
+## 2026-10-06 — Dedicated favicon.ico Standardization
+
+### User Request
+"@[c:\Users\DELL\Desktop\Portfilo\public\favicon.ico] isko as favicon use kro"
+
+### Work Completed
+- Identified that Next.js App Router was serving `src/app/favicon.ico` (which had a default template icon of 25.9 KB) instead of `public/favicon.ico` (Dr. Rajeev Kumar transparent headshot icon of 2.57 KB).
+- Overwrote `src/app/favicon.ico` with `public/favicon.ico`.
+- Updated `src/app/layout.tsx` metadata and added explicit `<link rel="icon" href="/favicon.ico" sizes="any" />` in `<head>`.
+- Verified live server response: `/favicon.ico status: 200 content-type: image/x-icon size: 2577`.
+- Verified `npm run build` compiles cleanly with 0 errors and 0 warnings.
+- Committed and pushed to GitHub.
+
+### Files Modified
+- `src/app/favicon.ico`
+- `src/app/layout.tsx`
+- `editing.md`
+
+
 
 
