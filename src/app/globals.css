@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #0a0c12;
+  --bg-secondary: #0f131c;
+  --bg-tertiary: #141a27;
+  --bg-card: rgba(16, 21, 32, 0.75);
+  --bg-card-hover: rgba(22, 29, 44, 0.9);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-card: rgba(255, 255, 255, 0.1);
+  --border-gold: rgba(212, 175, 55, 0.3);
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --accent-gold: #c5a059;
+  --accent-gold-bright: #dfba73;
+  --accent-gold-soft: rgba(197, 160, 89, 0.12);
+  --accent-slate: #94a3b8;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+  selection-background-color: #c5a059;
+  selection-color: #0a0c12;
+}
+
+/* Classical Academic Serif Font for Headings & Titles */
+.font-serif-academic {
+  font-family: "Charter", "Georgia", "Cambria", "Times New Roman", Times, serif;
+  letter-spacing: -0.015em;
+}
+
+/* Luxury Academic Card */
+.academic-card {
+  background: rgba(15, 19, 29, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.academic-card:hover {
+  background: rgba(20, 26, 39, 0.95);
+  border-color: rgba(197, 160, 89, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -8px rgba(0, 0, 0, 0.6);
+}
+
+.academic-nav {
+  background: rgba(10, 12, 18, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Understated Prestigious Badges - NO flashy gradients */
+.badge-academic-gold {
+  background: rgba(197, 160, 89, 0.1);
+  color: #dfba73;
+  border: 1px solid rgba(197, 160, 89, 0.28);
+}
+
+.badge-academic-slate {
+  background: rgba(255, 255, 255, 0.04);
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.badge-academic-emerald {
+  background: rgba(16, 185, 129, 0.08);
+  color: #6ee7b7;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+/* Clean Gold Text Accent */
+.text-gold {
+  color: #dfba73;
+}
+
+.text-gold-muted {
+  color: #c5a059;
+}
+
+/* Subtle Architectural Grid Pattern */
+.bg-academic-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0c12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e2638;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2d3852;
+}
+
+/* Print Styles for Curriculum Vitae */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  header, footer, .mobile-quick-bar {
+    display: none !important;
+  }
+}
